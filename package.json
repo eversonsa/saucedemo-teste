@@ -1,0 +1,21 @@
+{
+  "name": "bdd-cucumber-playwright",
+  "version": "1.0.0",
+  "description": "E2E com Cucumber + Playwright + TS",
+  "scripts": {
+    "pree2e": "node scripts/createReportDir.js", 
+    "build": "tsc",
+    "test": "npx cucumber-js --require dist/**/*.js --format json:./reports/report.json",
+    "report": "node dist/support/reporter.js",
+    "e2e": "npm run pree2e && npm run build && npm run test && npm run report"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^9.2.0",
+    "@playwright/test": "^1.42.0",
+    "cucumber-html-reporter": "^5.5.0",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}

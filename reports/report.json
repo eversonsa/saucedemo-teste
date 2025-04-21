@@ -1,0 +1,325 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "adicionar-produtos-ao-carrinho;adicionar-um-produto-com-sucesso-ao-carrinho",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Adicionar um produto com sucesso ao carrinho",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7891891499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "que o usuário está logado com o usuário \"standard_user\" e senha \"secret_sauce\"",
+            "match": {
+              "location": "dist\\step-definitions\\loginSteps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3367045299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "ele adiciona o produto \"Sauce Labs Backpack\" ao carrinho",
+            "match": {
+              "location": "dist\\step-definitions\\CartSteps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56833899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "acessa o carrinho",
+            "match": {
+              "location": "dist\\step-definitions\\CartSteps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38200600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "ele deve ver o produto \"Sauce Labs Backpack\" no carrinho",
+            "match": {
+              "location": "dist\\step-definitions\\CartSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7236200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 75024900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "adicionar-produtos-ao-carrinho",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Adicionar produtos ao carrinho",
+    "tags": [],
+    "uri": "tests\\e2e\\features\\cart.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "finalizar-compra;finalizar-compra-com-sucesso",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Finalizar compra com sucesso",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7211537200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "que o usuário está logado com o usuário \"standard_user\" e senha \"secret_sauce\"",
+            "match": {
+              "location": "dist\\step-definitions\\loginSteps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1254165999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "ele adiciona o produto \"Sauce Labs Backpack\" ao carrinho",
+            "match": {
+              "location": "dist\\step-definitions\\CartSteps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48937900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "acessa o carrinho",
+            "match": {
+              "location": "dist\\step-definitions\\CartSteps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49227499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "ele preenche os dados do checkout com nome \"Everson\", sobrenome \"Zendure\" e cep \"12345\"",
+            "match": {
+              "location": "dist\\step-definitions\\CheckoutSteps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 120070199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "finaliza a compra",
+            "match": {
+              "location": "dist\\step-definitions\\CheckoutSteps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44541300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "deve ver a mensagem de sucesso \"Thank you for your order!\"",
+            "match": {
+              "location": "dist\\step-definitions\\CheckoutSteps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7341799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 57067900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "finalizar-compra",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Finalizar compra",
+    "tags": [],
+    "uri": "tests\\e2e\\features\\checkout.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;login-com-sucesso",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Login com sucesso",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7161791199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "que o usuário está logado com o usuário \"standard_user\" e senha \"secret_sauce\"",
+            "match": {
+              "location": "dist\\step-definitions\\loginSteps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1384851999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "ele deve ver a página de dashboard",
+            "match": {
+              "location": "dist\\step-definitions\\loginSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6991600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 57866399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login;login-com-usuário-bloqueado",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Login com usuário bloqueado",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7322281899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "que o usuário está logado com o usuário \"locked_out_user\" e senha \"secret_sauce\"",
+            "match": {
+              "location": "dist\\step-definitions\\loginSteps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1040226199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "deve ver a mensagem de erro \"Epic sadface: Sorry, this user has been locked out.\"",
+            "match": {
+              "location": "dist\\step-definitions\\loginSteps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10165300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 59151100
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [],
+    "uri": "tests\\e2e\\features\\login.feature"
+  }
+]
