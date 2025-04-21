@@ -1,0 +1,30 @@
+name: Playwright + Cucumber Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checar o código do repositório
+      uses: actions/checkout@v2
+
+    - name: Configurar Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'  # Defina a versão do Node.js que deseja usar
+
+    - name: Instalar dependências
+      run: |
+        npm install
+
+    - name: Rodar os testes
+      run: |
+        npx cucumber-js
