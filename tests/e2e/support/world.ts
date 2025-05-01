@@ -36,6 +36,7 @@ export class CustomWorld extends World {
     await this.context?.close();
     await this.browser?.close();
   }
+
 }
 
 setWorldConstructor(CustomWorld);
