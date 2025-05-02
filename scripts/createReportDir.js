@@ -1,14 +1,24 @@
 const fs = require('fs');
 const path = require('path');
 
-// Caminho do diretório de relatórios
-const reportDir = path.join(__dirname, '../reports');
+const reportsDir = path.join(__dirname, '../reports');
 
-// Verificar se o diretório 'reports' existe
-if (!fs.existsSync(reportDir)) {
-  // Se não existir, criar o diretório
-  fs.mkdirSync(reportDir);
-  console.log('Diretório "reports" criado.');
+if (!fs.existsSync(reportsDir)) {
+  fs.mkdirSync(reportsDir, { recursive: true });
 } else {
-  console.log('Diretório "reports" já existe.');
+  // Limpa o conteúdo da pasta reports/, incluindo subpastas como "html"
+  fs.readdirSync(reportsDir).forEach(file => {
+    const filePath = path.join(reportsDir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      // Recursivamente remove diretórios
+      fs.rmSync(filePath, { recursive: true, force: true });
+    } else {
+      // Remove arquivos
+      fs.unlinkSync(filePath);
+    }
+  });
 }
+
+console.log('Diretório "reports/" limpo com sucesso.');

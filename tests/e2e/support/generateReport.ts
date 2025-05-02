@@ -1,14 +1,18 @@
-const reporter = require('multiple-cucumber-html-reporter');
+const multipleReporter = require('multiple-cucumber-html-reporter');
 
-reporter.generate({
-  jsonDir: 'reports',           // Caminho onde está o report.json gerado pelo cucumber
-  reportPath: 'reports/html',   // Caminho onde o HTML será gerado
+multipleReporter.generate({
+  jsonDir: 'reports',
+  reportPath: 'reports/html',
+  reportName: 'E2E Report',
+  pageTitle: 'E2E Tests',
+  displayDuration: true,
+  openReportInBrowser: true,
   metadata: {
     browser: {
       name: 'chromium',
       version: 'latest',
     },
-    device: 'Local machine',
+    device: 'Local test machine',
     platform: {
       name: 'Windows',
       version: '10',
@@ -18,12 +22,8 @@ reporter.generate({
     title: 'Informações do Projeto',
     data: [
       { label: 'Projeto', value: 'Saucedemo Testes Automatizados' },
-      { label: 'Autor', value: 'Everson (Firefrank Zendure)' },
+      { label: 'Autor', value: 'Everson Souza de Araujo' },
       { label: 'Data de Execução', value: new Date().toLocaleString('pt-BR') }
     ],
   },
-  displayDuration: true,
-  openReportInBrowser: true,
-  pageTitle: "Relatório de Testes E2E",
-  reportName: "Relatório Automatizado com Playwright + Cucumber + TS",
 });
